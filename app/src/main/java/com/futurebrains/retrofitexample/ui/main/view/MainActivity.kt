@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.util.Log
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.futurebrains.retrofitexample.data.api.RetrofitBuilder
 import com.futurebrains.retrofitexample.data.model.User
@@ -60,7 +59,7 @@ class MainActivity : AppCompatActivity() {
     private fun setUpwithRecyclerView() = binding.rvHome.apply {
         useradapter = MainAdapter()
         adapter = useradapter
-        layoutManager = GridLayoutManager(this@MainActivity,2)
+        layoutManager = LinearLayoutManager(this@MainActivity)
         setHasFixedSize(true)
 
     }
